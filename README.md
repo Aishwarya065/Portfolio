@@ -1,2 +1,3 @@
 # sycs
-trying first time
+trying my first repository
+
