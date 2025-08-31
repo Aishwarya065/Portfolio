@@ -1,3 +1,2 @@
-# sycs
-trying my first repository
-
+TASK 1
+Portfolio
