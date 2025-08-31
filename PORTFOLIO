@@ -1,0 +1,199 @@
+<%@ Page Language="C#" AutoEventWireup="true" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aishwarya Rathod - Portfolio</title>
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; }
+        a { text-decoration: none; color: inherit; }
+        h1, h2, h3 { margin-bottom: 15px; }
+
+        /* Header */
+        header {
+            background: #111; color:white;
+            display:flex; justify-content:space-between; align-items:center;
+            padding:15px 40px; position:fixed; top:0; width:100%; z-index:1000;
+        }
+        header nav ul { list-style:none; display:flex; gap:20px; }
+        header nav ul li a { color:white; transition:0.3s; }
+        header nav ul li a:hover { color:#ffcc00; }
+
+        /* Hero Section */
+        .hero {
+            height:100vh; display:flex; flex-direction:column;
+            justify-content:center; align-items:center;
+            background:linear-gradient(120deg, #6a11cb, #2575fc);
+            color:white; text-align:center; padding:20px;
+        }
+        .hero h1 { font-size: 3rem; }
+        .hero h2 { font-size: 1.5rem; margin-bottom: 10px; }
+        .btn { background:#ffcc00; padding:12px 25px; border-radius:5px; margin:10px; display:inline-block; font-weight:bold; }
+        .btn:hover { background:white; color:#111; }
+
+        /* Section Base */
+        section { padding:100px 40px; min-height: 80vh; }
+
+        /* About */
+        #about { background: #f9f9f9; text-align:center; }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1000px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+        .about-logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        /* Services */
+        #services { background: #fff3e0; text-align:center; }
+        .services-container {
+            display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;
+        }
+        .service-box {
+            background:white; padding:20px; border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            flex:1; min-width:250px; max-width:300px;
+        }
+
+        /* Skills */
+        #skills { background: #e3f2fd; text-align:center; }
+        #skills ul { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin-top:20px; }
+        #skills li {
+            background:#2575fc; color:white; padding:10px 20px;
+            border-radius:20px; font-weight:bold;
+        }
+
+        /* Resume */
+        #resume { background: #fce4ec; text-align:center; }
+
+        /* Contact */
+        #contact { background: #ede7f6; text-align:center; }
+        #contact p { margin: 10px 0; font-size: 1.1rem; }
+
+        /* Footer */
+        footer {
+            background:#111; color:white; text-align:center;
+            padding:20px; margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><strong>Aishwarya Rathod</strong></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>Aishwarya Rathod</span></h1>
+        <h2>Software Developer</h2>
+        <p>I design and build modern, responsive, and user-friendly websites.</p>
+        <a href="#resume" class="btn">View Resume</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <!-- Left Side (Circle with AR) -->
+            <div class="about-logo">AR</div>
+
+            <!-- Right Side (Text) -->
+            <div class="about-text">
+                <p>
+                    I am passionate about creating clean and functional web projects.  
+                    I enjoy working with HTML, CSS, JavaScript, and ASP.NET.  
+                    With a strong interest in UI/UX design, I focus on building user-friendly interfaces.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>My Expertise</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>Building responsive and modern websites using ASP.NET and front-end technologies.</p>
+            </div>
+            <div class="service-box">
+                <h3>UI Design</h3>
+                <p>Designing user-friendly and visually appealing interfaces with simplicity in mind.</p>
+            </div>
+            <div class="service-box">
+                <h3>Database</h3>
+                <p>Implementing basic SQL databases and integrating them with web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>ASP.NET</li>
+            <li>SQL</li>
+            <li>MSSQL</li>
+            <li>C#</li>
+        </ul>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>My Resume</h2>
+        <p>You can view my resume below:</p>
+        <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:Aishwaryarathod2004@email.com">Aishwaryarathod2004@email.com</a></p>
+        <p>Phone: +91 12345 67890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Aishwarya Rathod. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
